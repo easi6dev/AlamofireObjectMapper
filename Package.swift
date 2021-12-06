@@ -6,6 +6,7 @@ import PackageDescription
 let package = Package(
     name: "AlamofireObjectMapper",
     platforms: [
+        .macOS(.v10_12),
         .iOS(.v10),
     ],
     products: [
@@ -24,7 +25,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "AlamofireObjectMapper",
-            dependencies: ["AlamofireObjectMapper"],
+            dependencies: ["Alamofire", "ObjectMapper"],
             path: "./AlamofireObjectMapper"),
     ]
 )
